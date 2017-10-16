@@ -44,22 +44,19 @@ import React from 'react';
  */
 
 const tableStyle = {
-
   table: {
     width: '100%',
     borderCollapse: 'collapse',
   },
-
 };
-
 
 function Cell({ children, style = {}, className }) {
   return <td style={style} className={className}>{children}</td>;
 }
 
-function Row({ children, style = {} }) {
+function Row({ children, style = {}, className }) {
   return (
-    <tr style={style}>
+    <tr style={style} className={className}>
       {React.Children.map(children, (el) => {
         if (el.type === Cell) return el;
         return <td>{el}</td>;
@@ -68,9 +65,9 @@ function Row({ children, style = {} }) {
   );
 }
 
-function Grid({ children, style = {} }) {
+function Grid({ children, style = {}, className }) {
   return (
-    <table style={{ ...tableStyle.table, ...style }}>
+    <table className={className} style={{ ...tableStyle.table, ...style }}>
       <tbody>
         {React.Children.map(children, (el) => {
           if (!el) return;

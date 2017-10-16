@@ -14,12 +14,13 @@
     "eslint-plugin-jsx-a11y": "4.0.0",
     "eslint-plugin-react": "6.4.1",
     "node-fetch": "^1.6.3",
-    "react-scripts": "0.9.5"
+    "react-scripts": "^1.0.14"
   },
   "dependencies": {
     "date-fns": "^1.28.3",
     "react": "^15.5.4",
-    "react-dom": "^15.5.4"
+    "react-dom": "^15.5.4",
+    "styled-components": "^2.2.1"
   },
   "scripts": {
     "install": "NODE_ENV=production babel src --out-dir lib --presets=react-app",

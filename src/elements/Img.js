@@ -7,6 +7,8 @@ const imgStyle = {
     textDecoration: 'none',
     border: 'none',
     display: 'block',
+      padding: '10px',
+      margin: '0 auto',
   },
 
 };
